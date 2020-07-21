@@ -3,7 +3,22 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
-
+    
+    hashtable = {}
+    i = 0
+    holder_array = []
+    
+    
+    while i < len(arrays):
+        for j in arrays[i]:
+            if j not in hashtable:
+                hashtable[j] = 0
+            else:
+                hashtable[j] += 1
+        i+=1  
+    
+    result = [n for n in hashtable.keys() if hashtable[n] >= 1]
+    
     return result
 
 
